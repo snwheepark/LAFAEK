@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip3 list:*)",
+      "Bash(python3 build_pptx.py)",
+      "Bash(python3 \"/Users/msnp378/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/5512c99b-538a-46d2-aa0f-198862346bbb/427ded13-5ae1-48ad-a33d-f98ce9d7baf0/skills/pptx/scripts/office/soffice.py\" --headless --convert-to pdf Lafaek_Presentation_RamosHorta.pptx)",
+      "Bash(rm -f slide-*.jpg)",
+      "Bash(pdftoppm -jpeg -r 150 Lafaek_Presentation_RamosHorta.pdf slide)",
+      "Read(//Users/msnp378/Desktop/Claude/lafaek-project/$PWD/**)",
+      "Bash(python3 -c \":*)",
+      "Bash(npm create:*)",
+      "Read(//usr/local/**)",
+      "Read(//opt/homebrew/**)",
+      "Bash(export PATH=\"$PATH:/usr/local/bin:/opt/homebrew/bin:/usr/bin\")",
+      "Read(//Users/msnp378/.nvm/**)",
+      "Read(//Users/msnp378/**)",
+      "Bash(echo $PATH)",
+      "Bash(env)",
+      "Bash(brew list:*)",
+      "Read(//Applications/**)",
+      "Bash(source ~/.zshrc)",
+      "Bash(source ~/.zprofile)"
+    ]
+  }
+}
