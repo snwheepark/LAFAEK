@@ -66,15 +66,9 @@ export function AskLafaek() {
   const [rawResponse, setRawResponse] = useState('');
   const [error, setError] = useState('');
 
-  const hasApiKey = Boolean((import.meta as any).env.VITE_ANTHROPIC_API_KEY);
-
   async function handleSubmit(q?: string) {
     const query = q || question;
     if (!query.trim()) return;
-    if (!hasApiKey) {
-      setError('API key not configured. Add VITE_ANTHROPIC_API_KEY to your .env file.');
-      return;
-    }
 
     setLoading(true);
     setError('');
