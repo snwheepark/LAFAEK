@@ -7,11 +7,6 @@ export function Footer() {
       textAlign: 'center',
       backgroundColor: '#FAFAF8',
     }}>
-      <img
-        src="/lafaek-logo.png"
-        alt="Lafaek"
-        style={{ width: '40px', height: '40px', objectFit: 'contain', marginBottom: '16px', opacity: 0.75 }}
-      />
       <p style={{
         fontFamily: 'EB Garamond, Georgia, serif',
         fontSize: '16px',

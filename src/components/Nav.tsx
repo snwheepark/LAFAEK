@@ -46,7 +46,6 @@ export function Nav() {
             flexShrink: 0,
           }}
         >
-          <img src="/lafaek-logo.png" alt="Lafaek" style={{ width: '28px', height: '28px', objectFit: 'contain' }} />
           <span style={{
             fontFamily: 'EB Garamond, Georgia, serif',
             fontSize: '22px',
