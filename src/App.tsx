@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Nav } from './components/Nav';
+import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { PetroleumFund } from './pages/PetroleumFund';
 import { Economy } from './pages/Economy';
@@ -30,6 +31,7 @@ function App() {
             <Route path="/ask" element={<AskLafaek />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   );

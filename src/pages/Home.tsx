@@ -17,19 +17,22 @@ export function Home() {
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 48px' }}>
       {/* Hero */}
       <div style={{ marginBottom: '96px' }}>
-        <h1
-          style={{
-            fontFamily: 'EB Garamond, Georgia, serif',
-            fontSize: '80px',
-            fontWeight: 500,
-            color: '#1A1A1A',
-            lineHeight: 1.05,
-            marginBottom: '24px',
-            letterSpacing: '-0.5px',
-          }}
-        >
-          Lafaek
-        </h1>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '32px', marginBottom: '24px' }}>
+          <img src="/lafaek-logo.png" alt="Lafaek" style={{ width: '120px', height: '120px', objectFit: 'contain' }} />
+          <h1
+            style={{
+              fontFamily: 'EB Garamond, Georgia, serif',
+              fontSize: '80px',
+              fontWeight: 500,
+              color: '#1A1A1A',
+              lineHeight: 1.05,
+              letterSpacing: '-0.5px',
+              margin: 0,
+            }}
+          >
+            Lafaek
+          </h1>
+        </div>
         <p
           style={{
             fontFamily: 'EB Garamond, Georgia, serif',

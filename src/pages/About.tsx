@@ -1,4 +1,6 @@
 import { SectionHeader } from '../components/SectionHeader';
+import WorldMap from '../components/WorldMap';
+import TimorMap from '../components/TimorMap';
 
 export function About() {
   const sources = [
@@ -21,6 +23,45 @@ export function About() {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 48px' }}>
       <SectionHeader title="Why Lafaek Exists" />
+
+      {/* Maps section */}
+      <div style={{ marginBottom: '80px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px' }}>
+          <div>
+            <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '11px', color: '#6B6B6B', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '12px' }}>
+              East Timor — Global Location
+            </p>
+            <div style={{ border: '1px solid #E8E4DC', overflow: 'hidden' }}>
+              <WorldMap />
+            </div>
+            <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '10px', color: '#9B9B9B', marginTop: '8px' }}>
+              Southeast Asia, north of Australia. Population: 1.40M. Capital: Dili.
+            </p>
+          </div>
+          <div>
+            <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '11px', color: '#6B6B6B', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '12px' }}>
+              13 Municipalities — Click pins for details
+            </p>
+            <div style={{ border: '1px solid #E8E4DC', overflow: 'hidden' }}>
+              <TimorMap />
+            </div>
+            <div style={{ display: 'flex', gap: '20px', marginTop: '8px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#C9A97A', border: '2px solid white', boxShadow: '0 1px 2px rgba(0,0,0,0.2)' }} />
+                <span style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '10px', color: '#6B6B6B' }}>Capital</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#1A1A1A', border: '2px solid white', boxShadow: '0 1px 2px rgba(0,0,0,0.2)' }} />
+                <span style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '10px', color: '#6B6B6B' }}>City</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#8B3A3A', border: '2px solid white', boxShadow: '0 1px 2px rgba(0,0,0,0.2)' }} />
+                <span style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '10px', color: '#6B6B6B' }}>Exclave (Oecusse)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Main narrative */}
       <div style={{ maxWidth: '720px', marginBottom: '80px' }}>

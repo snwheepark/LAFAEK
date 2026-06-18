@@ -39,15 +39,22 @@ export function Nav() {
         <Link
           to="/"
           style={{
-            fontFamily: 'EB Garamond, Georgia, serif',
-            fontSize: '22px',
-            fontWeight: 600,
-            color: '#1A1A1A',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
             textDecoration: 'none',
             flexShrink: 0,
           }}
         >
-          Lafaek
+          <img src="/lafaek-logo.png" alt="Lafaek" style={{ width: '28px', height: '28px', objectFit: 'contain' }} />
+          <span style={{
+            fontFamily: 'EB Garamond, Georgia, serif',
+            fontSize: '22px',
+            fontWeight: 600,
+            color: '#1A1A1A',
+          }}>
+            Lafaek
+          </span>
         </Link>
 
         <div style={{ display: 'flex', gap: '24px', alignItems: 'center', flexShrink: 0 }}>

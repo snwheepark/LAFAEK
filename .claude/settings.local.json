@@ -19,7 +19,8 @@
       "Bash(brew list:*)",
       "Read(//Applications/**)",
       "Bash(source ~/.zshrc)",
-      "Bash(source ~/.zprofile)"
+      "Bash(source ~/.zprofile)",
+      "Bash(node -e \"require\\(''./node_modules/leaflet/package.json''\\) && require\\(''./node_modules/react-leaflet/package.json''\\) && console.log\\(''leaflet OK''\\)\")"
     ]
   }
 }
