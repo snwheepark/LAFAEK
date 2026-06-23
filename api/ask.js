@@ -17,17 +17,27 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Missing question' });
   }
 
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    return res.status(500).json({ error: 'API key not configured' });
+  }
+
+  const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
     },
     body: JSON.stringify({
-      model: 'gpt-4o',
+      model: 'claude-sonnet-4-6',
+      max_tokens: 1500,
+      system: systemPrompt,
       messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: `${knowledgeBase}\n\nQuestion: ${question}` },
+        {
+          role: 'user',
+          content: `${knowledgeBase}\n\nUser question: ${question}`,
+        },
       ],
     }),
   });
@@ -38,5 +48,5 @@ export default async function handler(req, res) {
   }
 
   const data = await response.json();
-  return res.status(200).json({ answer: data.choices[0].message.content });
+  return res.status(200).json({ answer: data.content[0].text });
 }
