@@ -100,11 +100,6 @@ export function AskLafaek() {
           brief with cited figures, historical context, and policy implications — grounded in the
           Lafaek knowledge base.
         </p>
-        {!hasApiKey && (
-          <div style={{ marginTop: '16px', padding: '12px 16px', backgroundColor: '#FEF3C7', border: '1px solid #C9A97A', fontFamily: 'Inter, system-ui, sans-serif', fontSize: '13px', color: '#92400E' }}>
-            API key not configured. Add <code>VITE_ANTHROPIC_API_KEY=your_key</code> to a <code>.env</code> file and restart the dev server.
-          </div>
-        )}
       </div>
 
       {/* Input */}
