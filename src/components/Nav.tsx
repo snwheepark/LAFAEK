@@ -9,6 +9,7 @@ const navLinks = [
   { to: '/government-budget', label: 'Budget' },
   { to: '/policy-debates', label: 'Policy' },
   { to: '/geopolitical-context', label: 'Geopolitics' },
+  { to: '/scenarios', label: 'Scenarios' },
   { to: '/about', label: 'About' },
 ];
 

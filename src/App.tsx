@@ -11,6 +11,7 @@ import { PolicyDebates } from './pages/PolicyDebates';
 import { GeopoliticalContext } from './pages/GeopoliticalContext';
 import { About } from './pages/About';
 import { AskLafaek } from './pages/AskLafaek';
+import { Scenarios } from './pages/Scenarios';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/geopolitical-context" element={<GeopoliticalContext />} />
             <Route path="/about" element={<About />} />
             <Route path="/ask" element={<AskLafaek />} />
+            <Route path="/scenarios" element={<Scenarios />} />
           </Routes>
         </main>
         <Footer />
