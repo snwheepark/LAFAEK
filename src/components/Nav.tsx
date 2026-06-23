@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import lafaekLogo from '../assets/lafaek-logo.png';
 
 const navLinks = [
   { to: '/petroleum-fund', label: 'Petroleum Fund' },
@@ -46,6 +47,7 @@ export function Nav() {
             flexShrink: 0,
           }}
         >
+          <img src={lafaekLogo} alt="Lafaek" style={{ width: '28px', height: '28px', objectFit: 'contain' }} />
           <span style={{
             fontFamily: 'EB Garamond, Georgia, serif',
             fontSize: '22px',

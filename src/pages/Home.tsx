@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { StatCard } from '../components/StatCard';
+import lafaekLogo from '../assets/lafaek-logo.png';
 
 const sections = [
   { to: '/petroleum-fund', title: 'Petroleum Fund', desc: '$18.274B balance. 16 consecutive years of ESI violations. Fiscal cliff scenarios 2027–2045.' },
@@ -17,7 +18,12 @@ export function Home() {
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 48px' }}>
       {/* Hero */}
       <div style={{ marginBottom: '96px' }}>
-        <div style={{ marginBottom: '24px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '32px', marginBottom: '24px' }}>
+          <img
+            src={lafaekLogo}
+            alt="Lafaek crocodile logo"
+            style={{ width: '120px', height: '120px', objectFit: 'contain' }}
+          />
           <h1
             style={{
               fontFamily: 'EB Garamond, Georgia, serif',
