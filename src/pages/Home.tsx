@@ -18,12 +18,7 @@ export function Home() {
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 48px' }}>
       {/* Hero */}
       <div style={{ marginBottom: '96px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '32px', marginBottom: '24px' }}>
-          <img
-            src={lafaekLogo}
-            alt="Lafaek crocodile logo"
-            style={{ width: '120px', height: '120px', objectFit: 'contain' }}
-          />
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
           <h1
             style={{
               fontFamily: 'EB Garamond, Georgia, serif',
@@ -33,10 +28,16 @@ export function Home() {
               lineHeight: 1.05,
               letterSpacing: '-0.5px',
               margin: 0,
+              flexShrink: 0,
             }}
           >
             Lafaek
           </h1>
+          <img
+            src={lafaekLogo}
+            alt="Lafaek crocodile logo"
+            style={{ width: '340px', height: '280px', objectFit: 'contain', flexShrink: 0 }}
+          />
         </div>
 
         <p
