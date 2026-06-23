@@ -15,89 +15,91 @@ const sections = [
 
 export function Home() {
   return (
-    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 48px' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 48px' }}>
       {/* Hero */}
-      <div style={{ marginBottom: '96px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
-          <h1
-            style={{
-              fontFamily: 'EB Garamond, Georgia, serif',
-              fontSize: '80px',
-              fontWeight: 500,
-              color: '#1A1A1A',
-              lineHeight: 1.05,
-              letterSpacing: '-0.5px',
-              margin: 0,
-              flexShrink: 0,
-            }}
-          >
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        minHeight: 'calc(100vh - 56px)',
+        gap: '48px',
+        marginBottom: '96px',
+      }}>
+        {/* Left — text */}
+        <div style={{ flex: '1 1 0', minWidth: 0 }}>
+          <h1 style={{
+            fontFamily: 'EB Garamond, Georgia, serif',
+            fontSize: '108px',
+            fontWeight: 500,
+            color: '#1A1A1A',
+            lineHeight: 0.95,
+            letterSpacing: '-1px',
+            margin: '0 0 8px 0',
+          }}>
             Lafaek
           </h1>
-          <img
-            src={lafaekLogo}
-            alt="Lafaek crocodile logo"
-            style={{ width: '340px', height: '280px', objectFit: 'contain', flexShrink: 0 }}
-          />
-        </div>
-
-        <p
-          style={{
+          <p style={{
             fontFamily: 'EB Garamond, Georgia, serif',
-            fontSize: '28px',
+            fontSize: '32px',
             fontWeight: 400,
             color: '#1A1A1A',
-            marginBottom: '20px',
-            maxWidth: '700px',
-            lineHeight: 1.3,
-          }}
-        >
-          East Timor's economy. Finally explained.
-        </p>
-        <p
-          style={{
+            lineHeight: 1.25,
+            margin: '0 0 20px 0',
+            maxWidth: '540px',
+          }}>
+            East Timor's economy. Finally explained.
+          </p>
+          <p style={{
             fontFamily: 'Inter, system-ui, sans-serif',
-            fontSize: '16px',
+            fontSize: '15px',
             color: '#6B6B6B',
-            maxWidth: '640px',
+            maxWidth: '480px',
             lineHeight: 1.7,
-            marginBottom: '40px',
-          }}
-        >
-          25 years of verified economic data from the IMF, World Bank, Ministry of Finance, La'o Hamutuk,
-          WHO, WFP, and ILO — organized for analysts, journalists, and policymakers. Built on primary
-          institutional sources. No projections dressed as facts. No advocacy.
-        </p>
-        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-          <Link
-            to="/ask"
-            style={{
-              display: 'inline-block',
-              padding: '12px 28px',
-              backgroundColor: '#1A1A1A',
-              color: '#FAFAF8',
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '14px',
-              fontWeight: 500,
-              textDecoration: 'none',
-            }}
-          >
-            Ask Lafaek
-          </Link>
-          <Link
-            to="/petroleum-fund"
-            style={{
-              display: 'inline-block',
-              padding: '12px 28px',
-              border: '1px solid #E8E4DC',
-              color: '#1A1A1A',
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '14px',
-              fontWeight: 400,
-              textDecoration: 'none',
-            }}
-          >
-            Explore the data
-          </Link>
+            margin: '0 0 32px 0',
+          }}>
+            25 years of verified economic data from the IMF, World Bank, Ministry of Finance, La'o Hamutuk,
+            WHO, WFP, and ILO — organized for analysts, journalists, and policymakers.
+          </p>
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <Link
+              to="/ask"
+              style={{
+                display: 'inline-block',
+                padding: '11px 28px',
+                backgroundColor: '#1A1A1A',
+                color: '#FAFAF8',
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '13px',
+                fontWeight: 500,
+                textDecoration: 'none',
+              }}
+            >
+              Ask Lafaek
+            </Link>
+            <Link
+              to="/petroleum-fund"
+              style={{
+                display: 'inline-block',
+                padding: '11px 28px',
+                border: '1px solid #E8E4DC',
+                color: '#1A1A1A',
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '13px',
+                fontWeight: 400,
+                textDecoration: 'none',
+              }}
+            >
+              Explore the data
+            </Link>
+          </div>
+        </div>
+
+        {/* Right — logo */}
+        <div style={{ flex: '0 0 420px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img
+            src={lafaekLogo}
+            alt="Lafaek crocodile"
+            style={{ width: '420px', objectFit: 'contain' }}
+          />
         </div>
       </div>
 
